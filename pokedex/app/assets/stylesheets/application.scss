@@ -102,3 +102,45 @@ h3 {
   text-align: center;
   color: $black;
 }
+
+.pokedex {
+  display: flex;
+}
+
+.pokedex>ul {
+  flex: 1;
+}
+
+.pokedex li img {
+  width: 25%;
+  max-width: 100px;
+}
+
+.pokedex li {
+  list-style: none;
+  border-top: 1px solid black;
+  color: black;
+}
+
+.pokedex li:hover {
+  background-color: gray;
+}
+
+.pokedex span {
+  font-family: inherit;
+  font-size: 20px;
+}
+
+
+.pokemonDetail {
+  flex: 2;
+  font-size: 20px;
+}
+
+.pokemonDetail img {
+  width: 50%;
+}
+
+.pokemonDetail li:hover {
+  background-color: inherit;
+}
