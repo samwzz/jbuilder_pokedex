@@ -12,6 +12,11 @@ class PokemonDetail extends React.Component {
   }
 
   render () {
+    let itemDetail;
+    if (this.props.pokemonDetail.items) {
+      itemDetail = this.props.pokemonDetail.items.map((item) =>
+      <img src={item.image_url} key={item.id}/>
+    );}
     return (
       <section className="pokemonDetail">
         <img src={this.props.pokemonDetail.image_url} alt={this.props.pokemonDetail.name} />
@@ -21,6 +26,10 @@ class PokemonDetail extends React.Component {
           <li>Attack: {this.props.pokemonDetail.attack}</li>
           <li>Defense:{this.props.pokemonDetail.defense}</li>
           <li>Moves: {this.props.pokemonDetail.moves}</li>
+          <h2>Items</h2>
+          <ul className="items">
+            {itemDetail}
+          </ul>
         </ul>
       </section>
     );
