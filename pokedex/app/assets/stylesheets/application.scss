@@ -155,11 +155,11 @@ ul {
 
 .items {
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
 }
 
 .items img {
-  width: 20%;
+  width: 50%;
 }
 
 .pokemonDetail li {

@@ -7,3 +7,10 @@ export const selectAllPokemon = ({ pokemon }) => (
 export const selectSinglePokemon = ({ pokemonDetail }) => (
   pokemonDetail
 );
+
+export const selectPokemonItem = ( { pokemonDetail }, itemId ) => {
+  if (pokemonDetail.items) {
+    const foundItem = pokemonDetail.items.find(item => (item.id == itemId));
+    return foundItem || {};
+  }
+};
